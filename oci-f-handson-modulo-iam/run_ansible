@@ -1,0 +1,11 @@
+#!/bin/bash
+export PARENT_COMPARTMENT_OCID=ociid_compartment_aqui
+export COMPUTE_COMPARTMENT_OCID=ociid_compartment_aqui
+export REDES_COMPARTMENT_OCID=ociid_compartment_aqui
+export DB_COMPARTMENT_OCID=ociid_compartment_aqui
+
+ansible-playbook tcb-bmc-iam-cria-grupos-e-politicas.yaml
+ansible-playbook tcb-bmc-iam-cria-usuarios-cloud-admin.yaml
+ansible-playbook tcb-bmc-iam-cria-usuarios-dba-admin.yaml
+ansible-playbook tcb-bmc-iam-cria-usuarios-redes-admin.yaml
+ansible-playbook tcb-bmc-iam-cria-usuarios-compute-admin.yaml
